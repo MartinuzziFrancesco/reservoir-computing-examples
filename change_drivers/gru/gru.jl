@@ -1,2 +1,2 @@
-using ReservoirComputing, StatsBase, Random
+using ReservoirComputing, Random, Plots, LinearAlgebra
 

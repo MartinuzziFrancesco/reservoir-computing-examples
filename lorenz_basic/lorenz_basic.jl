@@ -22,8 +22,8 @@ test_data = data[:,shift+train_len+1:shift+train_len+predict_len]
 
 esn = ESN(input_data; 
     variation = Default(),
-    reservoir_init = RandSparseReservoir(300, radius=1.2, sparsity=6/300),
-    input_init = WeightedLayer(),
+    reservoir = RandSparseReservoir(300, radius=1.2, sparsity=6/300),
+    input_layer = WeightedLayer(),
     reservoir_driver = RNN(),
     nla_type = NLADefault(),
     states_type = StandardStates())
