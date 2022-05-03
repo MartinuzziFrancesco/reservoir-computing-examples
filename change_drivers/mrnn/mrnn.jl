@@ -36,8 +36,8 @@ test_cases = [base_case, case3, case4, case5]
 
 for case in test_cases
     esn = ESN(training_input,
-        input_init = WeightedLayer(scaling=0.3),
-        reservoir_init = RandSparseReservoir(300, radius=0.4),
+        input_layer = WeightedLayer(scaling=0.3),
+        reservoir = RandSparseReservoir(300, radius=0.4),
         reservoir_driver = case,
         states_type = ExtendedStates())
     wout = train(esn, training_target, StandardRidge(10e-6))
