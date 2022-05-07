@@ -31,7 +31,16 @@ training_method = StandardRidge(0.0)
 output_layer = train(esn, training_target, training_method)
 output = esn(Predictive(testing_input), output_layer)
 
+#comparison with ESN
+esn_rnn = ESN(training_input; 
+    reservoir = RandSparseReservoir(res_size, radius=res_radius),
+    reservoir_driver = RNN())
+
+output_layer    = train(esn_rnn, training_target, training_method)
+output_rnn      = esn_rnn(Predictive(testing_input), output_layer)
+
 println(msd(testing_target, output))
+println(msd(testing_target, output_rnn))
 
 plot([testing_target' output'], label=["actual" "predicted"], 
     plot_title="Santa Fe Laser",
