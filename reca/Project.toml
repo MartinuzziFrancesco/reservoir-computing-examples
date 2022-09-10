@@ -1,0 +1,4 @@
+[deps]
+CellularAutomata = "878138dc-5b27-11ea-1a71-cb95d38d6b29"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+ReservoirComputing = "7c2d2b1e-3dd4-11ea-355a-8f6a8116e294"

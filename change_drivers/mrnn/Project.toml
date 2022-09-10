@@ -1,0 +1,4 @@
+[deps]
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+ReservoirComputing = "7c2d2b1e-3dd4-11ea-355a-8f6a8116e294"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
